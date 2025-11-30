@@ -1,10 +1,7 @@
 import { useFetcher } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 
-/**
- * Inline form used to update a budget's name and amount.
- * Expects parent action to handle _action = "updateBudget".
- */
+
 const UpdateBudgetForm = ({ budget }) => {
   const fetcher = useFetcher();
   const isSubmitting = fetcher.state === "submitting";
