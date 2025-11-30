@@ -601,27 +601,27 @@ table a {
 .Toastify__toast-body {
   font-size: var(--fs-300);
 }
-/* Keep budget cards at natural height, avoid sibling stretch */
+
 .budgets {
-  display: grid;               /* your existing layout can stay grid */
+  display: grid;              
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--space-md);
-  align-items: start;          /* CRITICAL: stop stretching to tallest card */
+  align-items: start;          
 }
 
-/* Stabilize the actions row so Update button doesn't jump */
+
 .budget-actions-row {
   display: flex;
   gap: var(--space-sm);
   align-items: center;
 }
 
-/* Keep the update form visually distinct under the card content */
+
 .update-form-block {
   margin-top: var(--space-sm);
 }
 
-/* Optional: ensure buttons don't change width on hover */
+
 .btn,
 .btn.btn--outline,
 .btn.btn--warning,
