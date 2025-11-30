@@ -3,7 +3,7 @@ import { fetchData } from "../helpers";
 import wave from "../assets/wave.svg";
 import Nav from "../components/Nav";
 
-// IMPORTANT: Do not redirect here; just return data so the dashboard can decide to show Intro.
+
 export function mainLoader() {
   const userName = fetchData("userName");
   const authToken = fetchData("authToken");
