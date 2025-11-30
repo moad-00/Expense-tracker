@@ -1,4 +1,4 @@
-// Local Storage
+
 export const fetchData = (key) => {
   const value = localStorage.getItem(key);
   
@@ -12,8 +12,7 @@ export const fetchData = (key) => {
   }
 };
 
-// --- We have REMOVED the old CreateBudget function ---
-// --- It is now handled by the dashboardAction and the backend ---
+
 
 // waiting
 export const wait = () => new Promise(res => setTimeout(res, Math.random() * 800));
