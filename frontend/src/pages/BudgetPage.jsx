@@ -9,10 +9,7 @@ import UpdateBudgetForm from "../components/UpdateBudgetForm";
 
 const API_BASE_URL = "https://rosy-marilee-hyperpathetical.ngrok-free.dev/api";
 
-/**
- * Loader: fetch a single budget (task) and all expenses, then isolate those
- * belonging to this budget.
- */
+
 export async function BudgetLoader({ params }) {
   const authToken = fetchData("authToken");
   if (!authToken) throw new Error("Session expired.");
@@ -60,9 +57,7 @@ export async function BudgetLoader({ params }) {
   return { budget, expenses: budgetExpenses, spent };
 }
 
-/**
- * Action: handles createExpense, updateBudget, deleteExpense, deleteBudget
- */
+
 export async function budgetAction({ request, params }) {
   const authToken = fetchData("authToken");
   if (!authToken) throw new Error("Session expired.");
@@ -112,7 +107,7 @@ export async function budgetAction({ request, params }) {
       throw new Error("Invalid budget data.");
     }
 
-    // Try PATCH first (typical for Laravel), fallback to PUT if PATCH not allowed
+    
     let res = await fetch(`${API_BASE_URL}/tasks/${id}`, {
       method: "PATCH",
       headers,
