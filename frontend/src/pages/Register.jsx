@@ -14,38 +14,35 @@ const Register = () => {
         <h2>Create an Account</h2>
         <input
           type="text"
-          name="userName" // Maps to 'name' in backend
+          name="userName" 
           placeholder="Your Name"
           required
           autoComplete="name"
         />
         <input
           type="email"
-          name="userEmail" // Maps to 'email' in backend
+          name="userEmail" 
           placeholder="Email Address"
           required
           autoComplete="email"
         />
         <input
           type="password"
-          name="password" // Maps to 'password' in backend
+          name="password" 
           placeholder="Password"
           required
           autoComplete="new-password"
         />
-        {/* CRITICAL FIX: Add a second, visible password field for confirmation.
-           * Laravel requires a password_confirmation field.
-           * Making it visible improves UX and reliability over a hidden input.
-        */}
+        
         <input
           type="password"
-          name="password_confirmation" // Maps to 'password_confirmation' in backend
+          name="password_confirmation" 
           placeholder="Confirm Password"
           required
           autoComplete="new-password"
         />
 
-        {/* Removed duplicate _action field */}
+       
         <input type="hidden" name="_action" value="register" /> 
 
         <button type="submit" className="btn btn--dark">
