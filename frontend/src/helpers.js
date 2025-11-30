@@ -46,13 +46,13 @@ export const formatPercentage = (amt) => {
 // Format Date
 export const formatDateToLocalString = (epoch) => new Date(epoch).toLocaleDateString();
 
-// Get all items from local storage matching a key/value
+
 export const getAllMatchingItems = ({ category, key, value }) => {
     const data = fetchData(category) ?? [];
     return data.filter((item) => item[key] === value);
 };
 
-// Delete an item from local storage
+
 export const deleteItem = ({ key, id }) => {
     const existingData = fetchData(key);
     if (id) {
