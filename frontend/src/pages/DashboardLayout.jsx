@@ -10,7 +10,7 @@ import Intro from "../components/Intro";
 
 const API_BASE_URL = "https://rosy-marilee-hyperpathetical.ngrok-free.dev/api";
 
-// Loader: fetch budgets (tasks) + expenses if authenticated
+
 export async function dashboardLoader() {
   const userName = fetchData("userName");
   const authToken = fetchData("authToken");
@@ -123,7 +123,7 @@ export async function dashboardAction({ request }) {
       throw new Error("Please provide a valid name and amount.");
     }
 
-    // Try PATCH first, fallback to PUT
+    
     let res = await fetch(`${API_BASE_URL}/tasks/${id}`, {
       method: "PATCH",
       headers,
