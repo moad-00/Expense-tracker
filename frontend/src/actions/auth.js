@@ -1,6 +1,4 @@
 import { redirect } from "react-router-dom";
-
-// ⚠️ Make sure this URL is still correct
 const API_BASE_URL = "https://rosy-marilee-hyperpathetical.ngrok-free.dev/api";
 
 const notifyUser = (message) => {
